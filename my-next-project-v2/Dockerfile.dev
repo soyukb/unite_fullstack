@@ -1,0 +1,18 @@
+# 開発用イメージ
+FROM node:20-alpine
+
+# 作業ディレクトリ作成
+WORKDIR /app
+
+# package.json & lock ファイルをコピーして依存関係をインストール
+COPY package*.json ./
+RUN npm install
+
+# アプリケーションコードをすべてコピー
+COPY . .
+
+# ポート3000を公開（Next.jsデフォルト）
+EXPOSE 3000
+
+# 開発モードでNext.jsを起動
+CMD ["npm", "run", "dev"]
