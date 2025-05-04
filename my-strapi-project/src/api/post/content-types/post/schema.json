@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "posts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "content": {
+      "type": "text"
+    },
+    "translated_content": {
+      "type": "text"
+    },
+    "thingid": {
+      "type": "string"
+    },
+    "likes": {
+      "type": "integer"
+    },
+    "depth": {
+      "type": "integer"
+    },
+    "parentid": {
+      "type": "string"
+    },
+    "post_created_at": {
+      "type": "datetime"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article",
+      "inversedBy": "posts"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "articles",
+  "info": {
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article",
+    "description": "Create your blog content"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "translated_title": {
+      "type": "string",
+      "required": false
+    },
+    "body": {
+      "type": "blocks"
+    },
+    "article_type": {
+      "type": "enumeration",
+      "enum": [
+        "reddit_summary",
+        "manual_rich_text",
+        "youtube_clip"
+      ],
+      "default": "reddit_summary",
+      "required": true
+    },
+    "source_type": {
+      "type": "enumeration",
+      "enum": [
+        "reddit",
+        "manual",
+        "youtube",
+        "blog"
+      ]
+    },
+    "source_url": {
+      "type": "string"
+    },
+    "published_Date": {
+      "type": "datetime"
+    },
+    "posts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::post.post",
+      "mappedBy": "article"
+    },
+    "media": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::media.media",
+      "mappedBy": "article"
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "article"
+    }
+  }
+}
