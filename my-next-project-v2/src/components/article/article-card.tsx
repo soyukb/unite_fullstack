@@ -7,7 +7,7 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
+
 import { formatDate } from "@/lib/utils";
 import { MediaDisplay } from "@/components/shared/media-display";
 import type { Article } from "@/types/index";
@@ -17,7 +17,7 @@ interface ArticleCardProps {
 }
 
 export function ArticleCard({ article }: ArticleCardProps) {
-  const { title, translated_title, media, publishedAt, source_url } = article;
+  const { title, translated_title, media, publishedAt } = article;
   const mediaItem = media[0];
 
   return (
@@ -44,15 +44,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
         <p className="text-sm text-muted-foreground line-clamp-2">{title}</p>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <a
-          href={source_url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-sm text-primary flex items-center gap-1 hover:underline"
-        >
-          <ExternalLink size={14} />
-          元の投稿を見る
-        </a>
+        {/* コメント数といいね数（将来的に表示する予定） */}
       </CardFooter>
     </Card>
   );

@@ -32,17 +32,15 @@
       "target": "api::article.article",
       "inversedBy": "comments"
     },
-    "comments": {
+    "replies": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::comment.comment",
-      "mappedBy": "comment"
+      "target": "api::comment.comment"
     },
-    "comment": {
+    "parent": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::comment.comment",
-      "inversedBy": "comments"
+      "relation": "oneToOne",
+      "target": "api::comment.comment"
     }
   }
 }

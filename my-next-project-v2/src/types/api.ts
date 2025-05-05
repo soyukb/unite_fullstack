@@ -11,3 +11,8 @@ export type ApiResponse = {
     };
   };
 };
+
+// APIから返される単一記事のレスポンス型
+export interface ApiArticle {
+  data: Article;
+}

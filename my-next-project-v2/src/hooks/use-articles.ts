@@ -28,8 +28,9 @@ export function useArticles(initialPage = 1): FetchArticlesResult {
       const apiUrl =
         process.env.NEXT_PUBLIC_API_URL || "http://host.docker.internal:1337";
       const apiToken = process.env.NEXT_PUBLIC_API_TOKEN;
+      const pageSize = process.env.NEXT_PUBLIC_PAGE_SIZE || 2;
 
-      const url = `${apiUrl}/api/articles?populate[media]=true&pagination[page]=${page}&pagination[pageSize]=2`;
+      const url = `${apiUrl}/api/articles?populate[media]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}`;
 
       const headers: HeadersInit = {
         "Content-Type": "application/json",

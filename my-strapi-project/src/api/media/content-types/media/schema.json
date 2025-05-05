@@ -29,6 +29,12 @@
       "relation": "manyToOne",
       "target": "api::article.article",
       "inversedBy": "media"
+    },
+    "post": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::post.post",
+      "inversedBy": "media"
     }
   }
 }

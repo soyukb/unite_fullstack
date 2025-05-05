@@ -45,7 +45,7 @@
     "source_url": {
       "type": "string"
     },
-    "published_Date": {
+    "scheduledAt": {
       "type": "datetime"
     },
     "posts": {
@@ -65,6 +65,23 @@
       "relation": "oneToMany",
       "target": "api::comment.comment",
       "mappedBy": "article"
+    },
+    "language": {
+      "type": "enumeration",
+      "enum": [
+        "ja",
+        "en",
+        "zh"
+      ],
+      "default": "ja"
+    },
+    "tags": {
+      "type": "enumeration",
+      "enum": [
+        "Tournament",
+        "Update",
+        "Rank"
+      ]
     }
   }
 }
