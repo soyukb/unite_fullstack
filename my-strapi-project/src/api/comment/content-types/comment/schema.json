@@ -16,7 +16,7 @@
       "required": true
     },
     "author": {
-      "type": "string"
+      "type": "text"
     },
     "likes": {
       "type": "integer",

@@ -18,7 +18,7 @@
       "type": "text"
     },
     "thingid": {
-      "type": "string"
+      "type": "text"
     },
     "likes": {
       "type": "integer"
@@ -27,7 +27,7 @@
       "type": "integer"
     },
     "parentid": {
-      "type": "string"
+      "type": "text"
     },
     "post_created_at": {
       "type": "datetime"

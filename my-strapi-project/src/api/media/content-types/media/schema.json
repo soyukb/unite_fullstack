@@ -21,7 +21,7 @@
       "required": true
     },
     "media_url": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "article": {

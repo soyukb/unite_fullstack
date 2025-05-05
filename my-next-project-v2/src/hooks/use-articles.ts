@@ -30,7 +30,7 @@ export function useArticles(initialPage = 1): FetchArticlesResult {
       const apiToken = process.env.NEXT_PUBLIC_API_TOKEN;
       const pageSize = process.env.NEXT_PUBLIC_PAGE_SIZE || 2;
 
-      const url = `${apiUrl}/api/articles?populate[media]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}`;
+      const url = `${apiUrl}/api/articles?sort=createdAt:desc&populate[media]=true&pagination[page]=${page}&pagination[pageSize]=${pageSize}`;
 
       const headers: HeadersInit = {
         "Content-Type": "application/json",

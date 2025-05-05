@@ -13,11 +13,11 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "translated_title": {
-      "type": "string",
+      "type": "text",
       "required": false
     },
     "body": {
@@ -43,7 +43,7 @@
       ]
     },
     "source_url": {
-      "type": "string"
+      "type": "text"
     },
     "scheduledAt": {
       "type": "datetime"
