@@ -64,6 +64,8 @@ export function CommentForm({ articleId, onCommentAdded }: CommentFormProps) {
       if (onCommentAdded) {
         onCommentAdded();
       }
+      // ページを再読み込み
+      window.location.reload();
     } catch (error) {
       console.error("コメント投稿エラー:", error);
       alert("コメントの投稿に失敗しました。もう一度お試しください。");
